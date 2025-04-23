@@ -26,6 +26,7 @@
   "Mark whole buffer, then indent the region."
   (interactive)
   (save-excursion
+    (widen)
     (indent-region (point-min) (point-max) nil)))
 
 (provide 'reindent-buffer)
