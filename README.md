@@ -4,13 +4,19 @@ A tiny Emacs utility that reindents the entire buffer based on the current major
 
 ## Installation
 
-You can install this utility using [`quelpa`](https://github.com/quelpa/quelpa):
-
-First, ensure you have `quelpa` installed. Then add the following to your init file:
+To install via [`quelpa-use-package`](https://github.com/quelpa/quelpa-use-package), add the following to your Emacs configuration:
 
 ```elisp
-(quelpa 
-  '(reindent-buffer :fetcher github :repo "joshburnsxyz/reindent-buffer"))
+(use-package quelpa
+  :ensure t)
+
+(use-package quelpa-use-package
+  :after quelpa
+  :ensure t)
+
+(use-package projectile-todo-list
+  :quelpa (:fetcher github :repo "joshburnsxyz/reindent-buffer")
+  :commands (projectile-todo-list-run))
 ```
 
 Alternatively, download `reindent-buffer.el` manually and place it in your Emacs `load-path`:
