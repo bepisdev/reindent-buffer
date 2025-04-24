@@ -14,9 +14,8 @@ To install via [`quelpa-use-package`](https://github.com/quelpa/quelpa-use-packa
   :after quelpa
   :ensure t)
 
-(use-package projectile-todo-list
-  :quelpa (:fetcher github :repo "joshburnsxyz/reindent-buffer")
-  :commands (projectile-todo-list-run))
+(use-package reindent-buffer
+  :quelpa (:fetcher github :repo "joshburnsxyz/reindent-buffer"))
 ```
 
 Alternatively, download `reindent-buffer.el` manually and place it in your Emacs `load-path`:
